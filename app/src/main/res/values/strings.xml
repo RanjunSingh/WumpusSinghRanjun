@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Wumpus Singh Ranjun</string>
+    <string name="button">Cheat</string>
+    <string name="reset">Reset</string>
+    <string name="u">u</string>
+    <string name="l">l</string>
+    <string name="r">r</string>
+    <string name="d">d</string>
+    <string name="bow">Bow: no</string>
+    <string name="score">Score: 0</string>
+    <string name="arrows">Arrows: 0</string>
+    <string name="textArea">…</string>
+    <string name="uA">u</string>
+    <string name="lA">l</string>
+    <string name="dA">d</string>
+    <string name="rA">r</string>
+    <string name="a">A</string>
+    <string name="unbeatable">Unable to beat the wumpus</string>
+    <string name="eaten">Eaten by the Wumpus</string>
+    <string name="pit">Fell down the pit</string>
+    <string name="squareplayerselect">squarePlayerSelect</string>
+    <string name="circleplayerselect">circlePlayerSelect</string>
+    <string name="expandfabs">expandFABs</string>
+</resources>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/cheat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="onCheat"
+        android:text="@string/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gameView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="onReset"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gameView"
+        app:layout_constraintTop_toBottomOf="@+id/cheat" />
+
+    <edu.sdsmt.Singh_Ranjun.GameView
+        android:id="@+id/gameView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/uButton"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:onClick="onUp"
+        android:text="@string/u"
+        app:layout_constraintBottom_toTopOf="@+id/rButton"
+        app:layout_constraintEnd_toStartOf="@+id/rButton" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:onClick="onLeft"
+        android:text="@string/l"
+        app:layout_constraintEnd_toStartOf="@+id/uButton"
+        app:layout_constraintTop_toBottomOf="@+id/uButton" />
+
+    <Button
+        android:id="@+id/rButton"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:onClick="onRight"
+        android:text="@string/r"
+        app:layout_constraintBottom_toTopOf="@+id/dButton"
+        app:layout_constraintEnd_toStartOf="@+id/gameView" />
+
+    <Button
+        android:id="@+id/dButton"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onDown"
+        android:text="@string/d"
+        app:layout_constraintBottom_toTopOf="@+id/uArrow"
+        app:layout_constraintEnd_toStartOf="@+id/rButton" />
+
+    <TextView
+        android:id="@+id/bowText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/bow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/score"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrowsText" />
+
+    <TextView
+        android:id="@+id/arrowsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/arrows"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bowText" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/normalRoom1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/gameView"
+        app:layout_constraintTop_toTopOf="@+id/gameView"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/textArea"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gameView"
+        app:layout_constraintTop_toBottomOf="@+id/reset"
+        app:layout_constraintVertical_bias="0.32999998" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom0"
+        app:layout_constraintEnd_toStartOf="@+id/normalRoom2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom0"
+        app:layout_constraintTop_toTopOf="@+id/normalRoom0" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom1"
+        app:layout_constraintEnd_toStartOf="@+id/normalRoom3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom1"
+        app:layout_constraintTop_toTopOf="@+id/normalRoom1" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom2"
+        app:layout_constraintEnd_toEndOf="@+id/gameView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom2"
+        app:layout_constraintTop_toTopOf="@+id/normalRoom2" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom0"
+        app:layout_constraintStart_toEndOf="@+id/gameView"
+        app:layout_constraintStart_toStartOf="@+id/gameView"
+        app:layout_constraintTop_toBottomOf="@+id/normalRoom0" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom4"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom1"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom4"
+        app:layout_constraintTop_toBottomOf="@+id/normalRoom0" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom5"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom2"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom5"
+        app:layout_constraintTop_toBottomOf="@+id/normalRoom1" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom6"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom3"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom6"
+        app:layout_constraintTop_toTopOf="@+id/normalRoom6" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom4"
+        app:layout_constraintStart_toStartOf="@+id/gameView"
+        app:layout_constraintTop_toBottomOf="@+id/normalRoom4" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom8"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom5"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom8"
+        app:layout_constraintTop_toBottomOf="@+id/normalRoom4" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom9"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom6"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom9"
+        app:layout_constraintTop_toBottomOf="@+id/normalRoom5" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom10"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom7"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom10"
+        app:layout_constraintTop_toBottomOf="@+id/normalRoom6" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gameView"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom0"
+        app:layout_constraintStart_toStartOf="@+id/gameView" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom12"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom9"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom12"
+        app:layout_constraintTop_toBottomOf="@+id/normalRoom8" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom14"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom11"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom14"
+        app:layout_constraintTop_toBottomOf="@+id/normalRoom10" />
+
+    <edu.sdsmt.Singh_Ranjun.NormalRoom
+        android:id="@+id/normalRoom14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normalRoom13"
+        app:layout_constraintEnd_toEndOf="@+id/normalRoom10"
+        app:layout_constraintStart_toEndOf="@+id/normalRoom13"
+        app:layout_constraintTop_toBottomOf="@+id/normalRoom9" />
+
+    <edu.sdsmt.Singh_Ranjun.ExitRoom
+        android:id="@+id/exitRoom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gameView"
+        app:layout_constraintEnd_toEndOf="@+id/gameView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/gameView"
+        app:layout_constraintTop_toTopOf="@+id/gameView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/uArrow"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:enabled="false"
+        android:onClick="onUArrow"
+        android:text="@string/uA"
+        app:layout_constraintBottom_toTopOf="@+id/rArrow"
+        app:layout_constraintEnd_toStartOf="@+id/rArrow" />
+
+    <Button
+        android:id="@+id/lArrow"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:enabled="false"
+        android:onClick="onLArrow"
+        android:text="@string/lA"
+        app:layout_constraintEnd_toStartOf="@+id/uArrow"
+        app:layout_constraintTop_toBottomOf="@+id/uArrow" />
+
+    <Button
+        android:id="@+id/dArrow"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:enabled="false"
+        android:onClick="onDArrow"
+        android:text="@string/dA"
+        app:layout_constraintStart_toEndOf="@+id/lArrow"
+        app:layout_constraintTop_toBottomOf="@+id/lArrow" />
+
+    <Button
+        android:id="@+id/rArrow"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:enabled="false"
+        android:onClick="onRArrow"
+        android:text="@string/rA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gameView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a"
+        app:layout_constraintBottom_toTopOf="@+id/dArrow"
+        app:layout_constraintEnd_toStartOf="@+id/rArrow"
+        app:layout_constraintStart_toEndOf="@+id/lArrow"
+        app:layout_constraintTop_toBottomOf="@+id/uArrow"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/circlePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:contentDescription="@string/circleplayerselect"
+        android:focusable="true"
+        android:onClick="onCircle"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/lArrow"
+        app:layout_constraintEnd_toStartOf="@+id/dButton"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:srcCompat="@drawable/circle" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/squarePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:contentDescription="@string/expandfabs"
+        android:focusable="true"
+        android:onClick="onRectangle"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/lArrow"
+        app:layout_constraintEnd_toStartOf="@+id/dButton"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:srcCompat="@drawable/sqaure" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/burst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="@string/squareplayerselect"
+        android:focusable="true"
+        android:onClick="onBurst"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/lArrow"
+        app:layout_constraintEnd_toStartOf="@+id/dButton"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:srcCompat="@drawable/rocket" />
+</androidx.constraintlayout.widget.ConstraintLayout>
